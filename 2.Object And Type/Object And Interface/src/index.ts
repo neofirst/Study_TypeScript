@@ -1,0 +1,2 @@
+import {printMe} from './IPerson';
+
