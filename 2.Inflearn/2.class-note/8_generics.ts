@@ -1,14 +1,14 @@
-// function LogText<T>(text: T): T {
-//   console.log(text);
-//   return text;
-// }
+function LogText<T>(text: T): T {
+  console.log(text);
+  return text;
+}
 
 const logText = <T>(text: T): T => {
   console.log(text);
   return text;
 };
 
-logText<string>("log text");
+logText<string>('log text');
 logText<boolean>(true);
 
 interface DropDown<T> {
@@ -17,7 +17,7 @@ interface DropDown<T> {
 }
 
 const obj1: DropDown<string> = {
-  value: "test",
+  value: 'test',
   selected: false,
 };
 
@@ -56,4 +56,4 @@ interface Item {
 const getItem = <T extends keyof Item>(item: T): T => {
   return item;
 };
-getItem("name");
+getItem('name');

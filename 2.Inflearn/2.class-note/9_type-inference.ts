@@ -7,8 +7,8 @@ interface temp<T> {
   title: string;
 }
 const item: temp<string> = {
-  value: "test",
-  title: "title",
+  value: 'test',
+  title: 'title',
 };
 
 interface temp1<T> {
@@ -20,15 +20,15 @@ interface temp2<T> extends temp1<T> {
   tag: T;
 }
 const item1: temp1<string> = {
-  value: "test",
-  title: "title",
+  value: 'test',
+  title: 'title',
 };
 
 const item2: temp2<string> = {
-  title: "title",
-  description: "description",
-  value: "value",
-  tag: "tag",
+  title: 'title',
+  description: 'description',
+  value: 'value',
+  tag: 'tag',
 };
 
-const arr = [1, 2, true, "string"];
+const arr = [1, 2, true, 'string'];

@@ -1,6 +1,6 @@
 class Temp {
   private name: string;
-  public age: number;
+  age: number;
   readonly log: string;
 
   constructor(name: string, age: number) {

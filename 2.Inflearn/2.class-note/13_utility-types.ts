@@ -16,27 +16,27 @@ const fetchProducts = (): Promise<Product[]> => {};
 // }
 
 //Pick
-type ShoppingItem = Pick<Product, "id" | "name" | "price">;
+type ShoppingItem = Pick<Product, 'id' | 'name' | 'price'>;
 const displayProductDetail = (
-  shoppingItem: Pick<Product, "id" | "name" | "price">
+  shoppingItem: Pick<Product, 'id' | 'name' | 'price'>
 ) => {};
 
 //Omit
 //Pick과 반대 개념
-const omitTemp: Omit<Product, "brand" | "stock"> = {
+const omitTemp: Omit<Product, 'brand' | 'stock'> = {
   id: 1,
-  name: "name",
+  name: 'name',
   price: 2,
-  somthing: { test: "test" },
+  somthing: { test: 'test' },
 };
 
-// interface UpdateProduct {
-//   id?: number;
-//   name?: string;
-//   price?: number;
-//   brand?: string;
-//   stock?: number;
-// }
+interface UpdateProduct {
+  id?: number;
+  name?: string;
+  price?: number;
+  brand?: string;
+  stock?: number;
+}
 //interfect UpdateProduct와 동일 효과
 type UpdateProduct = Partial<Product>;
 const updateProductItem = (productItem: Partial<Product>) => {};
@@ -56,14 +56,14 @@ interface UserProfile {
 
 // 1번
 type UserProfileUpdate = {
-  username: UserProfile["username"];
-  email: UserProfile["email"];
-  profilePhotoUrl: UserProfile["profilePhotoUrl"];
+  username: UserProfile['username'];
+  email: UserProfile['email'];
+  profilePhotoUrl: UserProfile['profilePhotoUrl'];
 };
 
 // 2번 Mapped Type
 type UserProfileUpdate = {
-  [p in "username" | "email" | "profilePhotoUrl"]?: UserProfile[p];
+  [p in 'username' | 'email' | 'profilePhotoUrl']?: UserProfile[p];
 };
 type UserProfileKeys = keyof UserProfile;
 
